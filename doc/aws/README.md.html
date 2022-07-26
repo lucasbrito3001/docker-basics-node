@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>README.md</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../doc-style.css" />
+  <script src="../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../";
+    var thisFile = "aws/README.md";
+    var defaultSidebar = true;
+  </script>
+  <script src="../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+      <div class="heading h1">
+        <a href="#aws-cli-v2">AWS CLI v2</a>
+      </div>
+
+      <div class="heading h2">
+        <a href="#installation">Installation</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#installing-without-sudo">Installing without sudo</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#updating">Updating</a>
+      </div>
+
+      <div class="heading h3">
+        <a href="#removing-the-installation">Removing the installation</a>
+      </div>
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="docs markdown"><div class="pilwrap" id="aws-cli-v2">
+  <h1>
+    <a href="#aws-cli-v2" name="aws-cli-v2" class="pilcrow"></a>
+AWS CLI v2
+  </h1>
+</div>
+<p>This bundle contains a built executable of the AWS CLI v2.</p>
+<div class="pilwrap" id="installation">
+  <h2>
+    <a href="#installation" name="installation" class="pilcrow"></a>
+Installation
+  </h2>
+</div>
+<p>To install the AWS CLI v2, run the <code>install</code> script:</p>
+<pre><code>$ sudo ./install 
+You can now run: /usr/local/bin/aws --version
+</code></pre>
+<p>This will install the AWS CLI v2 at <code>/usr/local/bin/aws</code>.  Assuming
+<code>/usr/local/bin</code> is on your <code>PATH</code>, you can now run:</p>
+<pre><code>$ aws --version
+</code></pre>
+<div class="pilwrap" id="installing-without-sudo">
+  <h3>
+    <a href="#installing-without-sudo" name="installing-without-sudo" class="pilcrow"></a>
+Installing without sudo
+  </h3>
+</div>
+<p>If you don't have <code>sudo</code> permissions or want to install the AWS
+CLI v2 only for the current user, run the <code>install</code> script with the <code>-b</code>
+and <code>-i</code> options:</p>
+<pre><code>$ ./install -i ~/.local/aws-cli -b ~/.local/bin
+</code></pre>
+<p>This will install the AWS CLI v2 in <code>~/.local/aws-cli</code> and create
+symlinks for <code>aws</code> and <code>aws_completer</code> in <code>~/.local/bin</code>. For more
+information about these options, run the <code>install</code> script with <code>-h</code>:</p>
+<pre><code>$ ./install -h
+</code></pre>
+<div class="pilwrap" id="updating">
+  <h3>
+    <a href="#updating" name="updating" class="pilcrow"></a>
+Updating
+  </h3>
+</div>
+<p>If you run the <code>install</code> script and there is a previously installed version
+of the AWS CLI v2, the script will error out. To update to the version included
+in this bundle, run the <code>install</code> script with <code>--update</code>:</p>
+<pre><code>$ sudo ./install --update
+</code></pre>
+<div class="pilwrap" id="removing-the-installation">
+  <h3>
+    <a href="#removing-the-installation" name="removing-the-installation" class="pilcrow"></a>
+Removing the installation
+  </h3>
+</div>
+<p>To remove the AWS CLI v2, delete the its installation and symlinks:</p>
+<pre><code>$ sudo rm -rf /usr/local/aws-cli
+$ sudo rm /usr/local/bin/aws
+$ sudo rm /usr/local/bin/aws_completer
+</code></pre>
+<p>Note if you installed the AWS CLI v2 using the <code>-b</code> or <code>-i</code> options, you will
+need to remove the installation and the symlinks in the directories you
+specified.</p>
+</div>
+  </div>
+</body>
+</html>
