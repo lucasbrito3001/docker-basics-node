@@ -1,12 +1,8 @@
 version: "3"
+
 services:
-  node:
+  app:
     build: .
-    command: "npm run start"
-    working_dir: /usr/app
-    environment: 
-      - NODE_ENV=development
-    expose:
-      - "4321"
     ports:
-      - "4321:4321"
+      - "3000:4321"
+    command: npm start
